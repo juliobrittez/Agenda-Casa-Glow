@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+
+<div class="main-layout">
+    <section class="col-form">
+        <h2>Nuevo Turno</h2>
+        <div class="form-group">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="servicio" placeholder="Servicio">
+            <input type="date" id="fecha">
+            <input type="time" id="hora">
+            <button id="btn-guardar">Guardar</button>
+        </div>
+    </section>
+
+    <section class="col-lista" id="lista-turnos">
+        <h2>Turnos</h2>
+    </section>
+
+    <section class="col-calendario">
+        <div class="calendario-style-container">
+            <div class="calendar-style-header">
+                <button onclick="cambiarMes(-1)">◀</button>
+                <div class="mes-titulo-container">
+                    <h2 id="mes-titulo">Junio</h2>
+                    <span id="año-titulo">2026</span>
+                </div>
+                <button onclick="cambiarMes(1)">▶</button>
+            </div>
+            <div class="calendar-style-days">
+                <div id="dias-nombres">
+                    <div>SU</div><div>MO</div><div>TU</div><div>WE</div><div>TH</div><div>FR</div><div>SA</div>
+                </div>
+                <div id="calendario-grid"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
